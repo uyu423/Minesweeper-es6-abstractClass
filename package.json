@@ -1,0 +1,26 @@
+{
+  "name": "minesweeper",
+  "version": "0.0.1-dev",
+  "description": "Simple Minesweeper Console App, using ECMA2015 Abstract Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "development": "nodemon --exec babel-node --presets=es2015 ./app.js",
+    "build": "",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://uyu423@github.com/uyu423/Minesweeper-es6-abstractClass.git"
+  },
+  "author": "Yowu",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/uyu423/Minesweeper-es6-abstractClass/issues"
+  },
+  "homepage": "https://github.com/uyu423/Minesweeper-es6-abstractClass#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "colors": "^1.1.2"
+  }
+}
