@@ -1,6 +1,6 @@
 {
   "name": "minesweeper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple Minesweeper Console App, using ECMA2015 Abstract Class",
   "main": "index.js",
   "scripts": {

@@ -4,6 +4,10 @@ import ARROW_SETS from './config/ArrowSet';
 
 class Minesweeper {
   constructor(Row, Col, MineCnt, callback) {
+    if(MineCnt > (Row * Col)) {
+      callback(("Error : Mine Count can not over " + (Row * Col)).red);
+      process.exit(1);
+    }
     this.field = new Field(Row, Col);
     this.mineMeta = Array();
     this.maxMine = MineCnt;
@@ -37,7 +41,7 @@ class Minesweeper {
         if(row < 0 || col < 0 || row >= maxRow || col >= maxCol) {
           // console.log("lange overflow. continue".red);
           continue;
-        } 
+        }
         else {
           if(typeof this.field.retMap()[row][col] != 'undefined') {
             if(this.field.retClassName(row, col) == 'Mine')
@@ -51,7 +55,7 @@ class Minesweeper {
               // console.log("Exception Error".red);
               process.exit(1);
             }
-          } 
+          }
           else {
             // console.log((typeof this.field.retMap()[row][col]) + ". new Danger()".blue);
             this.field.setBlock(row, col, new Danger());
@@ -68,7 +72,7 @@ class Minesweeper {
     }
 
     const map = this.field.retMap();
-    switch(mode) { 
+    switch(mode) {
       case 'pretty':
         for(let i=0; i<map.length; i++) {
           for(let j=0; j<map.length; j++) {
