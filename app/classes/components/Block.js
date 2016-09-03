@@ -7,7 +7,6 @@ class Block {
   }
   setValue(val) {
     this.value = val;
-    console.log("Adjust Value : ", this.value)
   }
 }
 
@@ -21,10 +20,10 @@ class Mine extends Block {
   }
 }
 
-class Empty extends Block {
+class Danger extends Block {
   constructor() {
     super();
-    super.setValue(0);
+    super.setValue(1);
   }
   toString() {
     return this.value.toString();
@@ -37,4 +36,4 @@ class Empty extends Block {
   }
 }
 
-export { Mine, Empty }
+export { Mine, Danger }
