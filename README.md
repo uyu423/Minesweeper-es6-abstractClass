@@ -18,6 +18,6 @@ npm run development
 ```
 ### Production
 ```sh
-npm build
-npm start
+npm run build
+npm run start
 ```
